@@ -4,6 +4,18 @@ A repository (and website) providing an overview of relevant IT security confere
 
 Forked with love from [ai-deadlines](https://github.com/paperswithcode/ai-deadlines).
 
+## Classification
+
+Events are usually either classified as **Trade Fairs** _or_ **Conferences**.
+Other tags to classify the events include:
+- **Trainings & Workshops** (events with a focus on practical trainings and workshops)
+- **Academic** (academic research conferences)
+- **Offensive Security** (events with a strong focus on everything with the red team in mind)
+- **Security Operations** (blue team conferences)
+- **Digital Forensics & Incident Response** (dedicated events for DFIR people)
+- **Security Research** (non-academic security research targeting threat actors and their tooling)
+- **Operation Technology & Internet of Things** (events focusing on OT and IoT)
+
 ## Contributing
 
 Contributions are very welcome!

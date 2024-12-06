@@ -10,7 +10,7 @@
   color: "#00fffb"
 - name: Academic
   sub: UNI
-  color: "#ffc400"
+  color: "#993300"
 - name: Offensive Security (Red Teaming, Penetration Testing, Exploitation)
   sub: OFF
   color: "##871c1c"
