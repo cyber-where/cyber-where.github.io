@@ -1,28 +1,28 @@
 ---
-- name: Security
-  sub: SEC
+- name: Trade Fair
+  sub: TF
   color: "#ffd300"
-- name: Threat Intelligence
-  sub: TI
-  color: "#deff0a"
+- name: Conference
+  sub: CON
+  color: "#00ff00"
+- name: Trainings & Workshops
+  sub: TRNG
+  color: "#00fffb"
+- name: Academic
+  sub: UNI
+  color: "#ffc400"
+- name: Offensive Security (Red Teaming, Penetration Testing, Exploitation)
+  sub: OFF
+  color: "##871c1c"
+- name: Security Operations 
+  sub: SOC
+  color: "#0000ff"
 - name: Digital Forensics & Incident Response
   sub: DFIR
-  color: "#0aefff"
-- name: Penetration Testing, Red Teaming & Offensive Security
-  sub: OFF
-  color: "#147df5"
-- name: Governance, Risk & Compliance
-  sub: GRC
-  color: "#0aff99"
-- name: Cloud Security
-  sub: CS
-  color: "#580aff"
-- name: Reverse Engineering & Malware Analysis
-  sub: RE
-  color: "#be0aff"
-- name: Artificial Intelligence & Machine Learning
-  sub: AIML
-  color: "#a432a8"
+  color: "#7b00d4"
+- name: Security Research (Threat Intelligence, Reverse Engineering, Exploitation)
+  sub: SRE
+  color: "#a3a800"
 - name: Operational Technology & Internet of Things
   sub: OTIOT
-  color: "#32a855"
+  color: "#008f91"
