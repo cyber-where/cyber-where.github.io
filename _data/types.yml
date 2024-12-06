@@ -1,31 +1,28 @@
 ---
-- name: Machine Learning
-  sub: ML
+- name: Security
+  sub: SEC
   color: "#ffd300"
-- name: Computer Vision
-  sub: CV
+- name: Threat Intelligence
+  sub: TI
   color: "#deff0a"
-- name: Computer Graphics
-  sub: CG
+- name: Digital Forensics & Incident Response
+  sub: DFIR
   color: "#0aefff"
-- name: Natural Language Proc
-  sub: NLP
+- name: Penetration Testing, Red Teaming & Offensive Security
+  sub: OFF
   color: "#147df5"
-- name: Robotics
-  sub: RO
+- name: Governance, Risk & Compliance
+  sub: GRC
   color: "#0aff99"
-- name: Speech/SigProc
-  sub: SP
+- name: Cloud Security
+  sub: CS
   color: "#580aff"
-- name: Data Mining
-  sub: DM
+- name: Reverse Engineering & Malware Analysis
+  sub: RE
   color: "#be0aff"
-- name: Automated Planning
-  sub: AP
+- name: Artificial Intelligence & Machine Learning
+  sub: AIML
   color: "#a432a8"
-- name: Knowledge Representation
-  sub: KR
+- name: Operational Technology & Internet of Things
+  sub: OTIOT
   color: "#32a855"
-- name: Human-Computer Interaction
-  sub: HCI
-  color: "#a83232"
