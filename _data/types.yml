@@ -12,7 +12,7 @@
   sub: UNI
   color: "#993300"
 - name: Offensive Security (Red Teaming, Penetration Testing, Exploitation)
-  sub: OFF
+  sub: "OFF"
   color: "##871c1c"
 - name: Security Operations 
   sub: SOC
