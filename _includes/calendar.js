@@ -83,7 +83,7 @@ function load_conference_list() {
   var conf_list_all = [];
   {% for conf in site.data.conferences %}
     // add countdown in red
-    conf_list_all.push({
+    /* conf_list_all.push({
       id: "{{conf.id}}-countdown",
       abbreviation: "{{conf.id}}",
       name: "{{conf.title}} {{conf.year}}",
@@ -93,7 +93,7 @@ function load_conference_list() {
       subject: "{{conf.sub}}",
       startDate: Date.parse("{{conf.countdown}}"),
       endDate: Date.parse("{{conf.countdown}}"),
-    });
+    }); */
 
     // add Conferences in chosen color
     {% if conf.start != "" %}

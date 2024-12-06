@@ -1,13 +1,13 @@
 - title: 38C3
   full_name: 38. Chaos Communication Congress
   id: 38c3
-  year: 2024
   place: Hamburg, Germany
   link: https://events.ccc.de/congress/2024/infos/startpage.html
+  countdown: '2024-12-27 08:00:00'
   date: December 27-30, 2024
   start: 2024-12-27
   end: 2024-12-30
-  countdown: '2024-12-27 08:00:00'
+  year: 2024
   timezone: UTC+1
   sub: CON
   description: Europe's largest hacker meetup.
