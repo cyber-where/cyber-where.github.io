@@ -1,14 +1,13 @@
 - title: 38C3
-  year: 2024
   id: 38c3
+  year: 2024
+  place: Hamburg, Germany
   link: https://events.ccc.de/congress/2024/infos/startpage.html
   deadline: '2024-10-10 23:59:59'
-  abstract_deadline: '2024-10-03 23:59:59'
-  timezone: UTC-12
-  place: Hamburg, Germany
   date: December 27-30, 2024
   start: 2024-12-27
   end: 2024-12-30
-  hindex: 100
+  abstract_deadline: '2024-10-03 23:59:59'
+  timezone: UTC-12
   sub: Conference
   note: TODO

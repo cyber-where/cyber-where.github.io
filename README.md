@@ -16,7 +16,6 @@ To add or update:
 - Make sure it has the `title`, `year`, `id`, `link`, `deadline`, `timezone`, `date`, `place`, `sub` attributes
     + See available timezone strings [here](https://momentjs.com/timezone/).
 - Optionally add a `note` and `abstract_deadline` in case the conference has a separate mandatory abstract deadline
-- Optionally add `hindex` (refers to h5-index from [here](https://scholar.google.com/citations?view_op=top_venues&vq=eng))
 - Example:
     ```yaml
     - title: BestConf
@@ -33,7 +32,6 @@ To add or update:
       end: YYYY-MM-DD
       paperslink: link-to-full-paper-list.com
       pwclink: link-to-papers-with-code.com
-      hindex: 100.0
       sub: SP
       note: Important
     ```
