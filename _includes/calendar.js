@@ -31,8 +31,8 @@
               }
 
 
-              if (e.events[i].id.endsWith("deadline")) {
-                headline_color = 'deadline-text';
+              if (e.events[i].id.endsWith("countdown")) {
+                headline_color = 'countdown-text';
               } else {
               }
               content +=
@@ -82,17 +82,17 @@ function load_conference_list() {
   // Gather data
   var conf_list_all = [];
   {% for conf in site.data.conferences %}
-    // add deadlines in red
+    // add countdown in red
     conf_list_all.push({
-      id: "{{conf.id}}-deadline",
+      id: "{{conf.id}}-countdown",
       abbreviation: "{{conf.id}}",
       name: "{{conf.title}} {{conf.year}}",
       color: "red",
       location: "{{conf.place}}",
       date: "{{conf.date}}",
       subject: "{{conf.sub}}",
-      startDate: Date.parse("{{conf.deadline}}"),
-      endDate: Date.parse("{{conf.deadline}}"),
+      startDate: Date.parse("{{conf.countdown}}"),
+      endDate: Date.parse("{{conf.countdown}}"),
     });
 
     // add Conferences in chosen color

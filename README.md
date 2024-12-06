@@ -13,7 +13,7 @@ We are looking to compile a list of all (technical) IT security conferences.
 To add or update:
 - Fork the repository
 - Update `_data/conferences.yml`
-- Make sure it has the `title`, `year`, `id`, `link`, `deadline`, `timezone`, `date`, `place`, `sub` attributes
+- Make sure it has the `title`, `year`, `id`, `link`, `countdown`, `timezone`, `date`, `place`, `sub` attributes
     + See available timezone strings [here](https://momentjs.com/timezone/).
 - Optionally add a short 1-2 sentence `description`
 - Example:
@@ -23,13 +23,13 @@ To add or update:
       id: bestconf22  # title as lower case + last two digits of year
       full_name: Best Conference for Anything  # full conference name
       link: link-to-website.com
-      deadline: YYYY-MM-DD HH:SS
+      countdown: YYYY-MM-DD HH:SS
       timezone: Asia/Seoul
       place: Incheon, South Korea
       date: September, 18-22, 2022
       start: YYYY-MM-DD
       end: YYYY-MM-DD
       sub: SP
-      description: Important
+      description: Important conference
     ```
 - Send a pull request

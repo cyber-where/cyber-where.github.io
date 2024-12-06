@@ -4,17 +4,17 @@ VERSION:2.0
 PRODID:-//{{ site.domain }}//cyber-where//EN
 X-PUBLISHED-TTL:PT1H
 {%- for conf in site.data.conferences -%}
-{% if conf.deadline != "TBA" %}
+{% if conf.countdown != "TBA" %}
 BEGIN:VEVENT
-SUMMARY:{{ conf.title }} {{ conf.year }} deadline
+SUMMARY:{{ conf.title }} {{ conf.year }} countdown
 UID:{{ conf.id }} {% if conf.timezone contains "UTC" %} {% assign tz = conf.timezone | split: "UTC" %} {% if tz[1] contains "-" %} {% assign tz = tz[1] | replace: "-", "+" %} {% else if tz[1] contains "+" %} {% assign tz = tz[1] | replace: "+", "-" %} {% else assign tz = tz[1] %} {% endif %}
 ORGANIZER:cyber-where.github.io
 DTSTAMP:{{ site.time | date: "%Y%m%dT%H%M%SZ" }}
-DTSTART;TZID=Etc/GMT{{ tz }}:{{ conf.deadline | date: "%Y%m%dT%H%M%S" }}
+DTSTART;TZID=Etc/GMT{{ tz }}:{{ conf.countdown | date: "%Y%m%dT%H%M%S" }}
 {% else %}
 ORGANIZER:cyber-where.github.io
 DTSTAMP:{{ site.time | date: "%Y%m%dT%H%M%SZ" }}
-DTSTART;TZID={{ conf.timezone }}:{{ conf.deadline | date: "%Y%m%dT%H%M%S" }}
+DTSTART;TZID={{ conf.timezone }}:{{ conf.countdown | date: "%Y%m%dT%H%M%S" }}
 {% endif %}
 END:VEVENT
 {% endif %}

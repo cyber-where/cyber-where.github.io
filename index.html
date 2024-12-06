@@ -52,12 +52,12 @@
             <div class="row">
               <div class="meta col-12">
                 <span class="local-timezone-hide">
-                  Deadlines are shown in <span class="local-timezone">America/New_York</span> time.
+                  Countdowns are shown in <span class="local-timezone">America/New_York</span> time.
                   To view them in conference website timezones, click on them.
                 </span>
               </div>
               <div class="meta col-12">
-                You can optionally export all deadlines to
+                You can optionally export all conferences to
                 <a href="https://calendar.google.com/calendar/r?cid={{ site.url }}/cyber-where-calendar.ics">Google Calendar</a> or
                 <a href="/cyber-where-calendar.ics">.ics</a>.
               </div>
@@ -70,10 +70,10 @@
             <div class="row conf-row">
                 <div class="col-6">
                   <span class="conf-title">
-                      <a title="{% if conf.full_name %}{{conf.full_name}}{% else %}Deadline{% endif %} Details" href="{{site.baseurl}}/conference?id={{ conf.id }}">{{conf.title}} {{conf.year}}</a>
+                      <a title="{% if conf.full_name %}{{conf.full_name}}{% else %}Countdown{% endif %} Details" href="{{site.baseurl}}/conference?id={{ conf.id }}">{{conf.title}} {{conf.year}}</a>
                   </span>
                   <span class="conf-title-small">
-                      <a title="{% if conf.full_name %}{{conf.full_name}}{% else %}Deadline{% endif %} Details" href="{{site.baseurl}}/conference?id={{ conf.id }}">{{conf.title}} '{{conf.year | slice: -2, 3}}</a>
+                      <a title="{% if conf.full_name %}{{conf.full_name}}{% else %}Countdown{% endif %} Details" href="{{site.baseurl}}/conference?id={{ conf.id }}">{{conf.title}} '{{conf.year | slice: -2, 3}}</a>
                   </span>
                   <span class="conf-title-icon">
                     <a title="Conference Website" href="{{conf.link}}" target="_blank"><img src="{{site.baseurl}}/static/img/203-earth.svg" class="badge-link" alt="Link to Conference Website" /></a>
@@ -113,9 +113,9 @@
 
               </div>
               <div class="col-12 col-sm-6">
-                <div class="deadline">
-                  <div>Deadline:
-                    <span class="deadline-time"></span>
+                <div class="countdown">
+                  <div>Countdown:
+                    <span class="countdown-time"></span>
                   </div>
                 </div>
                 <div class="calendar"></div>
@@ -170,13 +170,13 @@
         {% for sub in conf.sub %}
         $('#{{conf.id}} .{{sub}}-tag').html(sub2name["{{sub}}"].toLocaleLowerCase());
         {% endfor %}
-        {% if conf.deadline == "TBA" %}
+        {% if conf.countdown == "TBA" %}
           $('#{{conf.id}} .timer').html("TBA");
-          $('#{{conf.id}} .deadline-time').html("TBA");
+          $('#{{conf.id}} .countdown-time').html("TBA");
         {% else %}
-          // adjust date according to deadline timezone
+          // adjust date according to countdown timezone
           var timezone = {% if conf.timezone %}"{{conf.timezone}}" {% else %} "America/New_York" {% endif %};
-          var confDate = moment.tz("{{conf.deadline}}", timezone);
+          var confDate = moment.tz("{{conf.countdown}}", timezone);
 
           // render countdown timer
           $('#{{conf.id}} .timer').countdown(confDate.toDate(), function (event) {
@@ -188,10 +188,10 @@
               $(this).html(event.strftime('%Dd %H:%M:%S'));
           });
 
-          // convert deadline to local timezone
+          // convert countdown to local timezone
           try {
             var localConfDate = moment.tz(confDate, local_timezone);
-            $('#{{conf.id}} .deadline-time').html(localConfDate.toString());
+            $('#{{conf.id}} .countdown-time').html(localConfDate.toString());
           }
           catch(err) {
             console.log("Error converting to local timezone.");
@@ -200,7 +200,7 @@
           // add calendar button
           var myCalendar = createCalendarFromObject({
             id:  '{{conf.id}}',
-            title: '{{conf.title}} {{conf.year}} deadline',
+            title: '{{conf.title}} {{conf.year}} countdown',
             date: confDate.toDate(),
             duration: 60,
           })
@@ -214,8 +214,8 @@
           if (diff > 0) {
             $('#{{conf.id}}').addClass('past');
             $('#{{conf.id}}').appendTo($("#past_confs"))
-            $('#{{conf.id}} .timer').replaceWith($('#{{conf.id}} .deadline'));
-            $('#{{conf.id}} .timer-small').replaceWith($('#{{conf.id}} .deadline'));
+            $('#{{conf.id}} .timer').replaceWith($('#{{conf.id}} .countdown'));
+            $('#{{conf.id}} .timer-small').replaceWith($('#{{conf.id}} .countdown'));
             $('#{{conf.id}} .calendar').remove();
           }
         {% endif %}

@@ -3,10 +3,10 @@
   year: 2024
   place: Hamburg, Germany
   link: https://events.ccc.de/congress/2024/infos/startpage.html
-  deadline: '2024-10-10 23:59:59'
   date: December 27-30, 2024
   start: 2024-12-27
   end: 2024-12-30
+  countdown: '2024-12-27 08:00:00'
   timezone: UTC-12
   sub: Conference
-  description: TODO
+  description: Europe's largest hacker meetup.
