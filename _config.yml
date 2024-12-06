@@ -4,6 +4,7 @@ author: Cyber where? Community
 
 domain: "cyber-where.github.io"
 baseurl: "https://cyber-where.github.io/"
+repository: "https://github.com/cyber-where/cyber-where.github.io"
 
 twitter_hashtag: 
 github_username: cyber-where
