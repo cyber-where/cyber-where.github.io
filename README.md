@@ -45,3 +45,5 @@ To add or update:
       description: Important conference
     ```
 - Send a pull request
+
+You can preview your changes using Docker/Docker-compose (`docker-compose up`) and then browsing to `http://localhost:4000/`.
